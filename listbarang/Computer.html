@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>MarketShopp</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f2f2f2;
+    }
+
+    header {
+      background: linear-gradient(90deg, #222, #444);
+      color: white;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+
+    header p {
+      margin: 5px;
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .product {
+      background: white;
+      padding: 15px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .product:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 8px;
+    }
+
+    h3 {
+      margin: 5px 0;
+    }
+
+    .rating {
+      color: gold;
+      font-size: 18px;
+      margin-top: 5px;
+    }
+
+    .rating span {
+      color: #555;
+      font-size: 14px;
+      margin-left: 5px;
+    }
+
+    .price {
+      font-size: 19px;
+      font-weight: bold;
+      color: #ff6600;
+      margin: 10px 0;
+    }
+
+    button {
+      background: linear-gradient(90deg, #ff6600, #ff8533);
+      color: white;
+      border: none;
+      padding: 11px;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: linear-gradient(90deg, #e65c00, #ff6600);
+      transform: scale(1.03);
+    }
+
+    footer {
+      text-align: center;
+      padding: 12px;
+      background: #ddd;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+  </style>
+
+</head>
+<body>
+
+<header>
+  <h1>🛍️ MarketShopp</h1>
+  <p>Toko Peralatan Komputer</p>
+</header>
+
+<main class="products">
+
+  <div class="product">
+    <img src="foto/monitor.JPG">
+    <h3>Monitor</h3>
+    <div class="rating">⭐⭐⭐⭐⭐ <span>(145 rating)</span></div>
+    <div class="price">Rp 2.575.000</div>
+    <button onclick="beli('Monitor', 2575000)">🛒 Beli</button>
+  </div>
+
+  <div class="product">
+    <img src="foto/cpu.AVIF">
+    <h3>CPU</h3>
+    <div class="rating">⭐⭐⭐⭐⭐ <span>(210 rating)</span></div>
+    <div class="price">Rp 3.350.000</div>
+    <button onclick="beli('CPU', 3350000)">🛒 Beli</button>
+  </div>
+
+  <div class="product">
+    <img src="foto/keyboard.JPG">
+    <h3>Keyboard</h3>
+    <div class="rating">⭐⭐⭐⭐☆ <span>(98 rating)</span></div>
+    <div class="price">Rp 850.000</div>
+    <button onclick="beli('Keyboard', 850000)">🛒 Beli</button>
+  </div>
+
+  <div class="product">
+    <img src="foto/taplak mouse.AVIF">
+    <h3>Alas Mouse</h3>
+    <div class="rating">⭐⭐⭐⭐⭐ <span>(176 rating)</span></div>
+    <div class="price">Rp 180.000</div>
+    <button onclick="beli('Alas Mouse', 180000)">🛒 Beli</button>
+  </div>
+
+  <div class="product">
+    <img src="foto/mouse.JPG">
+    <h3>Mouse</h3>
+    <div class="rating">⭐⭐⭐⭐⭐ <span>(132 rating)</span></div>
+    <div class="price">Rp 360.000</div>
+    <button onclick="beli('Mouse', 360000)">🛒 Beli</button>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 MarketShopp | khrim_MarketShopp</p>
+</footer>
+
+<script>
+
+function beli(namaBarang, harga) {
+
+  let konfirmasi = confirm(
+    "Detail Pembelian:\n\n" +
+    "Barang : " + namaBarang + "\n" +
+    "Harga  : Rp " + harga.toLocaleString() + "\n\n" +
+    "Lanjutkan pembelian?"
+  );
+
+  if (konfirmasi) {
+
+    alert(
+      "✅ Pembelian berhasil!\n\n" +
+      "Barang : " + namaBarang + "\n" +
+      "Total  : Rp " + harga.toLocaleString() + "\n\n" +
+      "Terima kasih sudah berbelanja!"
+    );
+
+  } else {
+
+    alert("❌ Pembelian dibatalkan");
+
+  }
+
+}
+
+</script>
+
+</body>
+</html>

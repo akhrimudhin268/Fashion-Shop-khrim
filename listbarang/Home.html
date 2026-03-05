@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>MarketShopp</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f2f2f2;
+    }
+
+    header {
+      background: #222;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    header p {
+      margin: 5px;
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .product {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .product:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    .rating {
+      color: gold;
+      font-size: 18px;
+      margin-top: 5px;
+    }
+
+    .rating span {
+      color: #555;
+      font-size: 14px;
+      margin-left: 5px;
+    }
+
+    .price {
+      font-size: 18px;
+      font-weight: bold;
+      color: #ff6600;
+      margin: 8px 0;
+    }
+
+    button {
+      background: #ff6600;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background: #e65c00;
+    }
+
+    footer {
+      text-align: center;
+      padding: 12px;
+      background: #ddd;
+      margin-top: 20px;
+    }
+  </style>
+
+</head>
+<body>
+
+<header>
+  <h1>🛍️ MarketShopp</h1>
+  <p>Toko Perabot Rumah Tangga</p>
+</header>
+
+<main class="products">
+
+  <div class="product">
+    <img src="foto/dipet.JPG" alt="Dipet">
+    <h3>Dipet</h3>
+    <div class="rating">⭐⭐⭐⭐⭐ <span>(132 rating)</span></div>
+    <div class="price">Rp 3.575.000</div>
+    <button onclick="beli('Dipet')">Beli</button>
+  </div>
+
+  <div class="product">
+    <img src="foto/meja ruangtamu.JPG" alt="Dispenser">
+    <h3>Meja Ruang Tamu</h3>
+    <div class="rating">⭐⭐⭐⭐☆ <span>(89 rating)</span></div>
+    <div class="price">Rp 850.000</div>
+    <button onclick="beli('meja ruangtamu')">Beli</button>
+  </div>
+
+  <div class="product">
+    <img src="foto/kasur.JPG" alt="Kasur">
+    <h3>Kasur</h3>
+    <div class="rating">⭐⭐⭐⭐⭐ <span>(210 rating)</span></div>
+    <div class="price">Rp 1.500.000</div>
+    <button onclick="beli('Kasur')">Beli</button>
+  </div>
+
+  <div class="product">
+    <img src="foto/sofa.JPG" alt="Sofa">
+    <h3>Sofa</h3>
+    <div class="rating">⭐⭐⭐⭐⭐ <span>(178 rating)</span></div>
+    <div class="price">Rp 2.800.000</div>
+    <button onclick="beli('Sofa')">Beli</button>
+  </div>
+
+  <div class="product">
+    <img src="foto/meja makan.JPG" alt="Meja Makan">
+    <h3>Meja Makan</h3>
+    <div class="rating">⭐⭐⭐⭐⭐ <span>(154 rating)</span></div>
+    <div class="price">Rp 3.600.000</div>
+    <button onclick="beli('Meja Makan')">Beli</button>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 MarketShopp | khrim_MarketShopp</p>
+</footer>
+
+<script>
+  function beli(namaBarang) {
+    let konfirmasi = confirm("Apakah Anda ingin membeli " + namaBarang + "?");
+
+    if (konfirmasi) {
+      alert("✅ Terima kasih telah membeli: " + namaBarang);
+    }
+  }
+</script>
+
+</body>
+</html>

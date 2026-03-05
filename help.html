@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>MarketShopp Care</title>
+
+<style>
+
+body{
+font-family: Arial;
+margin:0;
+background:#f5f5f5;
+}
+
+/* Header */
+header{
+background:#03ac0e;
+color:white;
+padding:15px;
+text-align:center;
+}
+
+/* Container */
+.container{
+width:90%;
+max-width:900px;
+margin:auto;
+margin-top:20px;
+}
+
+/* Card */
+.card{
+background:white;
+padding:20px;
+margin-bottom:15px;
+border-radius:8px;
+box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+.card h3{
+margin-top:0;
+color:#03ac0e;
+}
+
+/* Button */
+button{
+background:#03ac0e;
+color:white;
+border:none;
+padding:10px;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#02940c;
+}
+
+/* Input */
+input, textarea{
+width:100%;
+padding:10px;
+margin-top:5px;
+margin-bottom:10px;
+border-radius:5px;
+border:1px solid #ccc;
+}
+
+footer{
+text-align:center;
+padding:10px;
+background:#ddd;
+margin-top:20px;
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+<h2>MarketShopp Care</h2>
+<p>Pusat Bantuan Pelanggan MarketShopp</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h3>📦 Cek Status Pesanan</h3>
+<input type="text" placeholder="Masukkan ID Pesanan">
+<button onclick="cekPesanan()">Cek</button>
+</div>
+
+<div class="card">
+<h3>❓ Pertanyaan Umum (FAQ)</h3>
+<p><b>Cara membeli barang?</b><br>
+Klik tombol beli dan konfirmasi pembelian.</p>
+
+<p><b>Metode pembayaran?</b><br>
+Transfer Bank, Dana, OVO, GoPay.</p>
+
+<p><b>Berapa lama pengiriman?</b><br>
+2–5 hari kerja.</p>
+</div>
+
+<div class="card">
+<h3>📞 Hubungi Kami</h3>
+<p>Email: akhrim@gmail.com</p>
+<p>WhatsApp: 0857 4318 5285/p>
+</div>
+
+<div class="card">
+<h3>✉️ Kirim Pesan</h3>
+
+<input type="text" id="nama" placeholder="Nama">
+
+<input type="email" id="email" placeholder="Email">
+
+<textarea id="pesan" placeholder="Tulis pesan Anda"></textarea>
+
+<button onclick="kirimPesan()">Kirim</button>
+
+</div>
+
+</div>
+
+<footer>
+© 2026 MarketShopp Care
+</footer>
+
+<script>
+
+function cekPesanan(){
+alert("Pesanan sedang diproses ✅");
+}
+
+function kirimPesan(){
+
+let nama=document.getElementById("nama").value;
+
+if(nama==""){
+alert("Isi nama terlebih dahulu");
+}else{
+alert("Pesan berhasil dikirim ✅");
+}
+
+}
+
+</script>
+
+</body>
+</html>

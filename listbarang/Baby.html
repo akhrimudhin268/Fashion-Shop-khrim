@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>MarketShopp</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f2f2f2;
+    }
+
+    header {
+      background: #222;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .product {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+     .product:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .rating {
+      color: gold;
+      font-size: 16px;
+      margin: 5px 0;
+    }
+
+    .rating span {
+      color: #555;
+      font-size: 14px;
+    }
+
+    .price {
+      font-size: 18px;
+      font-weight: bold;
+      color: #e65c00;
+      margin: 5px 0;
+    }
+
+    button {
+      background: #ff6600;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+
+    button:hover {
+      background: #e65c00;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #ddd;
+    }
+  </style>
+
+</head>
+<body>
+
+<header>
+  <h1>🛍️ MarketShopp</h1>
+</header>
+
+<main class="products">
+
+  <div class="product">
+    <img src="foto/alat makan bayi.JPG">
+    <h3>Alat Makan Bayi</h3>
+    <div class="rating">⭐⭐⭐⭐☆ <span>(85 rating)</span></div>
+    <div class="price">Rp 70.000</div>
+    <button onclick="beli('Alat Makan Bayi')">Beli</button>
+  </div>
+
+  <div class="product">
+    <img src="foto/bak bayi.JPG">
+    <h3>Bak Bayi</h3>
+    <div class="rating">⭐⭐⭐⭐⭐ <span>(120 rating)</span></div>
+    <div class="price">Rp 150.000</div>
+    <button onclick="beli('Bak Bayi')">Beli</button>
+  </div>
+
+  <div class="product">
+    <img src="foto/cushion.JPG">
+    <h3>Cushion Bayi</h3>
+    <div class="rating">⭐⭐⭐⭐☆ <span>(64 rating)</span></div>
+    <div class="price">Rp 200.000</div>
+    <button onclick="beli('Cushion Bayi')">Beli</button>
+  </div>
+
+  <div class="product">
+    <img src="foto/dot bayi.JPG">
+    <h3>Dot Bayi</h3>
+    <div class="rating">⭐⭐⭐⭐⭐ <span>(150 rating)</span></div>
+    <div class="price">Rp 50.000</div>
+    <button onclick="beli('Dot Bayi')">Beli</button>
+  </div>
+
+  <div class="product">
+    <img src="foto/trolli bayi.JPG">
+    <h3>Trolli Bayi</h3>
+    <div class="rating">⭐⭐⭐⭐⭐ <span>(200 rating)</span></div>
+    <div class="price">Rp 450.000</div>
+    <button onclick="beli('Trolli Bayi')">Beli</button>
+  </div>
+
+</main>
+
+<footer>
+  <p>khrim_MarketShopp</p>
+</footer>
+
+<script>
+function beli(namaBarang){
+  alert("Terima kasih telah membeli: " + namaBarang);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>MarketShopp</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f2f2f2;
+    }
+
+    header {
+      background: #222;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    header p {
+      margin: 5px;
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .product {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .product:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    .rating {
+      color: gold;
+      font-size: 18px;
+      margin-top: 5px;
+    }
+
+    .rating span {
+      color: #555;
+      font-size: 14px;
+      margin-left: 5px;
+    }
+
+    .price {
+      font-size: 18px;
+      font-weight: bold;
+      color: #ff6600;
+      margin: 8px 0;
+    }
+
+    button {
+      background: #ff6600;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background: #e65c00;
+    }
+
+    footer {
+      text-align: center;
+      padding: 12px;
+      background: #ddd;
+      margin-top: 20px;
+    }
+  </style>
+
+</head>
+<body>
+
+<header>
+  <h1>🛍️ MarketShopp</h1>
+  <p>Toko Alat Teknik Terpercaya</p>
+</header>
+
+<main class="products">
+
+  <div class="product">
+    <img src="foto/alat ukur mekanik.WEBP" alt="Alat Ukur Mekanik">
+    <h3>Alat Ukur Mekanik</h3>
+    <div class="rating">⭐⭐⭐⭐⭐ <span>(120 rating)</span></div>
+    <div class="price">Rp 75.000</div>
+    <button onclick="beli('Alat Ukur Mekanik')">Beli</button>
+  </div>
+
+  <div class="product">
+    <img src="foto/bor.JPG" alt="BOR">
+    <h3>BOR</h3>
+    <div class="rating">⭐⭐⭐⭐☆ <span>(95 rating)</span></div>
+    <div class="price">Rp 350.000</div>
+    <button onclick="beli('BOR')">Beli</button>
+  </div>
+
+  <div class="product">
+    <img src="foto/kunci inggris.JPG" alt="Kunci Inggris">
+    <h3>Kunci Inggris Lengkap</h3>
+    <div class="rating">⭐⭐⭐⭐⭐ <span>(180 rating)</span></div>
+    <div class="price">Rp 450.000</div>
+    <button onclick="beli('Kunci Inggris Lengkap')">Beli</button>
+  </div>
+
+  <div class="product">
+    <img src="foto/obeng.JPG" alt="Obeng">
+    <h3>Obeng</h3>
+    <div class="rating">⭐⭐⭐⭐☆ <span>(75 rating)</span></div>
+    <div class="price">Rp 80.000</div>
+    <button onclick="beli('Obeng')">Beli</button>
+  </div>
+
+  <div class="product">
+    <img src="foto/palu.JPG" alt="Palu">
+    <h3>Palu</h3>
+    <div class="rating">⭐⭐⭐⭐⭐ <span>(140 rating)</span></div>
+    <div class="price">Rp 60.000</div>
+    <button onclick="beli('Palu')">Beli</button>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 MarketShopp | khrim_MarketShopp</p>
+</footer>
+
+<script>
+function beli(namaBarang) {
+
+  let konfirmasi = confirm("Apakah Anda ingin membeli " + namaBarang + "?");
+
+  if (konfirmasi) {
+    alert("✅ Terima kasih telah membeli: " + namaBarang);
+  }
+
+}
+</script>
+
+</body>
+</html>

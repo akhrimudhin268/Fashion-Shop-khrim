@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>MarketShopp</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f2f2f2;
+}
+
+header {
+  background: #222;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.product {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.product img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.product h3 {
+  margin: 10px 0 5px;
+}
+
+.price {
+  color: #ff6600;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.rating {
+  color: gold;
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.rating span {
+  color: #555;
+  font-size: 14px;
+}
+
+button {
+  background: #ff6600;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 15px;
+}
+
+button:hover {
+  background: #e65c00;
+}
+
+footer {
+  text-align: center;
+  padding: 12px;
+  background: #ddd;
+  margin-top: 10px;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+<h1>🛍️ MarketShopp</h1>
+<p>Toko Online Terpercaya</p>
+</header>
+
+<main class="products">
+
+<div class="product">
+<img src="foto/tas laptop.JPG">
+<h3>Tas Laptop</h3>
+<div class="rating">★★★★★ <span>(120 rating)</span></div>
+<div class="price">Rp 550.000</div>
+<button>Beli Sekarang</button>
+</div>
+
+<div class="product">
+<img src="foto/mouse.JPG">
+<h3>Mouse Laptop</h3>
+<div class="rating">★★★★☆ <span>(85 rating)</span></div>
+<div class="price">Rp 350.000</div>
+<button>Beli Sekarang</button>
+</div>
+
+<div class="product">
+<img src="foto/speaker.JPG">
+<h3>Speaker</h3>
+<div class="rating">★★★★★ <span>(210 rating)</span></div>
+<div class="price">Rp 250.000</div>
+<button>Beli Sekarang</button>
+</div>
+
+<div class="product">
+<img src="foto/headset.JPG">
+<h3>Headset</h3>
+<div class="rating">★★★★☆ <span>(64 rating)</span></div>
+<div class="price">Rp 380.000</div>
+<button>Beli Sekarang</button>
+</div>
+
+<div class="product">
+<img src="foto/taplak mouse.AVIF">
+<h3>Alas Mouse</h3>
+<div class="rating">★★★★☆ <span>(45 rating)</span></div>
+<div class="price">Rp 160.000</div>
+<button>Beli Sekarang</button>
+</div>
+
+</main>
+
+<footer>
+<p>© 2026 MarketShopp | Semua Hak Dilindungi</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>MarketShopp</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f2f2f2;
+    }
+
+    header {
+      background: #222;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    header p {
+      margin: 5px;
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .product {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .product:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    .rating {
+      color: gold;
+      font-size: 18px;
+      margin-top: 5px;
+    }
+
+    .rating span {
+      color: #555;
+      font-size: 14px;
+      margin-left: 5px;
+    }
+
+    .price {
+      font-size: 18px;
+      font-weight: bold;
+      color: #ff6600;
+      margin: 8px 0;
+    }
+
+    button {
+      background: #ff6600;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background: #e65c00;
+    }
+
+    footer {
+      text-align: center;
+      padding: 12px;
+      background: #ddd;
+      margin-top: 20px;
+    }
+  </style>
+
+</head>
+<body>
+
+<header>
+  <h1>🛍️ MarketShopp</h1>
+  <p>Toko Peralatan Olahraga Terpercaya</p>
+</header>
+
+<main class="products">
+
+  <div class="product">
+    <img src="foto/barble.JPG" alt="Barbel">
+    <h3>Barbel</h3>
+    <div class="rating">⭐⭐⭐⭐⭐ <span>(150 rating)</span></div>
+    <div class="price">Rp 475.000</div>
+    <button onclick="beli('Barbel')">Beli</button>
+  </div>
+
+  <div class="product">
+    <img src="foto/bola.JPG" alt="Bola">
+    <h3>Berbagai Macam Bola</h3>
+    <div class="rating">⭐⭐⭐⭐☆ <span>(95 rating)</span></div>
+    <div class="price">Rp 50.000</div>
+    <button onclick="beli('Berbagai Macam Bola')">Beli</button>
+  </div>
+
+  <div class="product">
+    <img src="foto/raket.JPG" alt="Raket">
+    <h3>Raket Bulu Tangkis</h3>
+    <div class="rating">⭐⭐⭐⭐⭐ <span>(210 rating)</span></div>
+    <div class="price">Rp 750.000</div>
+    <button onclick="beli('Raket Bulu Tangkis')">Beli</button>
+  </div>
+
+  <div class="product">
+    <img src="foto/stick golf.WEBP" alt="Stick Golf">
+    <h3>Stick Golf</h3>
+    <div class="rating">⭐⭐⭐⭐☆ <span>(80 rating)</span></div>
+    <div class="price">Rp 1.580.000</div>
+    <button onclick="beli('Stick Golf')">Beli</button>
+  </div>
+
+  <div class="product">
+    <img src="foto/skipping rope.JPG" alt="Skipping Rope">
+    <h3>Skipping Rope</h3>
+    <div class="rating">⭐⭐⭐⭐⭐ <span>(170 rating)</span></div>
+    <div class="price">Rp 150.000</div>
+    <button onclick="beli('Skipping Rope')">Beli</button>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 MarketShopp | khrim_MarketShopp</p>
+</footer>
+
+<script>
+function beli(namaBarang) {
+
+  let konfirmasi = confirm("Apakah Anda ingin membeli " + namaBarang + "?");
+
+  if (konfirmasi) {
+    alert("✅ Terima kasih telah membeli: " + namaBarang);
+  }
+
+}
+</script>
+
+</body>
+</html>

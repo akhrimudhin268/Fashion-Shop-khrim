@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Masuk - Tokopedia Style</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .login-container {
+        background: white;
+        padding: 30px;
+        width: 380px;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+        color: #03ac0e;
+        margin-bottom: 20px;
+    }
+
+    input {
+        width: 100%;
+        padding: 12px;
+        margin: 8px 0;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 14px;
+    }
+
+    input:focus {
+        border-color: #03ac0e;
+        outline: none;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 12px;
+        background-color: #03ac0e;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .btn:hover {
+        background-color: #02940c;
+    }
+
+    .google-btn {
+        background-color: white;
+        color: black;
+        border: 1px solid #ddd;
+        margin-top: 10px;
+    }
+
+    .forgot {
+        text-align: right;
+        font-size: 12px;
+        margin-top: 5px;
+    }
+
+    .forgot a {
+        color: #03ac0e;
+        text-decoration: none;
+    }
+
+    .signup-link {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 14px;
+    }
+
+    .signup-link a {
+        color: #03ac0e;
+        text-decoration: none;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<div class="login-container">
+    <div class="logo">Tokopedia</div>
+
+    <input type="text" id="email" placeholder="Email atau Nomor HP">
+    <input type="password" id="password" placeholder="Password">
+
+    <div class="forgot">
+        <a href="#">Lupa Password?</a>
+    </div>
+
+    <button class="btn" onclick="login()">Masuk</button>
+    <button class="btn google-btn">Masuk dengan Google</button>
+
+    <div class="signup-link">
+        Belum punya akun? <a href="#">Daftar</a>
+    </div>
+</div>
+
+<script>
+function login() {
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    if(email === "" || password === "") {
+        alert("Email dan Password wajib diisi!");
+        return;
+    }
+
+    // Simulasi login berhasil
+    alert("Login berhasil!");
+}
+</script>
+
+</body>
+</html>

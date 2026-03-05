@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daftar - Tokopedia Style</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .signup-container {
+        background: white;
+        padding: 30px;
+        width: 380px;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+        color: #03ac0e;
+        margin-bottom: 20px;
+    }
+
+    input {
+        width: 100%;
+        padding: 12px;
+        margin: 8px 0;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 14px;
+    }
+
+    input:focus {
+        border-color: #03ac0e;
+        outline: none;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 12px;
+        background-color: #03ac0e;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .btn:hover {
+        background-color: #02940c;
+    }
+
+    .google-btn {
+        background-color: white;
+        color: black;
+        border: 1px solid #ddd;
+        margin-top: 10px;
+    }
+
+    .terms {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    .login-link {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 14px;
+    }
+
+    .login-link a {
+        color: #03ac0e;
+        text-decoration: none;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<div class="signup-container">
+    <div class="logo">Tokopedia</div>
+
+    <input type="text" id="nama" placeholder="Nama Lengkap">
+    <input type="text" id="email" placeholder="Email atau Nomor HP">
+    <input type="password" id="password" placeholder="Password">
+    <input type="password" id="confirmPassword" placeholder="Konfirmasi Password">
+
+    <div class="terms">
+        <input type="checkbox" id="agree"> Saya setuju dengan Syarat & Ketentuan
+    </div>
+
+    <button class="btn" onclick="daftar()">Daftar</button>
+    <button class="btn google-btn">Daftar dengan Google</button>
+
+    <div class="login-link">
+        Sudah punya akun? <a href="#">Masuk</a>
+    </div>
+</div>
+
+<script>
+function daftar() {
+    let nama = document.getElementById("nama").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    let confirmPassword = document.getElementById("confirmPassword").value;
+    let agree = document.getElementById("agree").checked;
+
+    if(nama === "" || email === "" || password === "" || confirmPassword === "") {
+        alert("Semua field harus diisi!");
+        return;
+    }
+
+    if(password !== confirmPassword) {
+        alert("Password tidak cocok!");
+        return;
+    }
+
+    if(!agree) {
+        alert("Anda harus menyetujui syarat & ketentuan!");
+        return;
+    }
+
+    alert("Pendaftaran berhasil!");
+}
+</script>
+
+</body>
+</html>
